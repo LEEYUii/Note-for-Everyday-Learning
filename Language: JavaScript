@@ -1,0 +1,268 @@
+Javascript:
+
+5 different data type:
+
+1)String
+2)Number (“NAN” also includes in this type)
+3)Boolean (“true” or “false”)
+4)Array
+5)Object
+
+Only “letters/numbers/$(dollar sign)/_(underscore)” can be used in the name of var;
+
+var’s name can’t start with numbers, but can contain numbers;
+
+
+Increment expression:
+1)x= x+1;  ======>  x++;
+2)x= x+2;  ======>  x+=;
+3)x=x+y;  ======>  x+=y;
+
+Math.pow(2,2) ：表示的是“2的2次方”；
+Math.round()：省略小数点后面的尾数；同”Math.floor()” and “Math.ceil()” 也是；
+
+the difference between the “Math.round()” method and the “Math.floor()”, “Math.ceil()” method:
+    Math.round() : means “round to the nearest integer”  (3.8 = 4;  3.2 = 3);
+    Math.floor() : means “round-down”  (3.8 = 3;  3.2 = 3);
+    Math.ceil() : means “round-up” (3.2 = 4; 3.8 = 4)
+    Math.trunc() : returning an integer by removing any fractional digits. (3.8 = 3; 3.2=3)
+    
+Math.random()：generate random number from 0 to 0.9999999...;
+
+“===”(triple equal signs) not only care about the equality, but also care about the data type. Which “==”(double equal signs) doesn’t.
+
+“&&” means “and”;
+”||” means “or”;
+
+output.push()：can push a data into the end of an array;
+
+arrayName.pop: can pop off the last data out of the array;
+
+
+
+The difference between the “while loop” and “for loop”:
+
+if we actually before the loop that how many time to loop we want, we’d better to use the “for loop”. that also means when we don’t know how many times we want to loop through a problem beforehand, we should choose the “while loop”. 
+
+A while loop is a little easier to explain than a for loop because a while loop will simply run the same code over and over until the condition becomes false.
+
+”while loop” is a state (to estimate the condition is true of false), “foo loop” is a iterate.
+
+
+
+x += y is the shorthand of “x = x + y”;
+y += x is the shorthand of “y = x + y”;
+
+“for.. in..” statement:  loop through the properties of Object.
+“for.. of..” statement:  loop through the values of an iterable object.
+{ break; } statement:  jump out（终止）a loop;
+{ continue; } statement:  jump over（跳过）a loop;
+“var/let/const” can all be used to declare variables (“variable” is used in javascript to storing data values);
+
+“let” keyword and “const” keyword:
+”let”——
+is a “Block Scope”, which means the “let” keyword can only be accessed inside the block; “let” keyword will not redeclare the variables(var) outside the block;
+
+
+Inside the block, the variable used the “var” keyword and the “let” keyword are similar; Outside the block, these two keywords(the “var” and the “let”) all have the global scope.  
+
+If in a statement, inside and outside block, all have the “var” keyword and the “let” keyword, then only the “var” keyword can be redeclared.
+
+”const” is a keyword to declare a variable that can’t be reassigned; “let” is a keyword to declare a variable that can be assigned restricted.
+
+Javascript has 3 scopes: 
+
+“global scope”: can be accessed from everywhere in the JS; (let - var)
+“locally function scope”: can only be accessed in the function. (let = var)
+“block scope”(only “let” and “const” keywords can have this scope);
+”loop scope”:
+
+
+For the “internal” use of “css” and “Javascript”:
+css: <style></style>;
+Javascript: <script></script>;
+
+“property” is used as description (as a noun), and the syntax is:  name.property;
+“method” is call a method on the object (as a verb), and the syntax is:  name.method();
+"method” is a function that the object can do, so it has to be associated with the object.
+“function” is a function that can be called when an event occur.
+
+
+
+Javascript DOM:
+1) document: means “the web site you are working on”;
+2) method(): which function you about to going to use;
+3) innerHTML: will access “the specific item’s html. (includes the content and the html elements you used on the element)”; it’s a common way to display data in HTML;
+4) textContent: will access “the specific item’s content”;
+
+
+Method:
+1) document.write() method can be only used in testing;
+2) console.log() method can be used for debugging;
+3) window.print() method can be used to print the content of the current window;
+
+
+“querySelector(“”)”: the syntax is the same as the syntax for the CSS selector. (h1/.class/#id)
+if one element/class/id has multiple items, it will only access the first one item.
+
+“querySelectorAll(“”)”: can solve the problem above, which means when an element/class/id has multiple items, it will show those items all out.
+
+“querySelectorAll(“”)[array.position]”: can specify the item that you want;
+
+
+Method Syntax:
+eg/: 
+document.querySelector(“parent element  child element”).property=”(string)”;
+document.querySelector(“.class element”/”#id element”/”#id .class”).property=”(string)”;
+
+If you want to change item’s css style using javascript, make sure every singer change writes as a string, which means need to have the “” (double quotation marks);
+
+Use JS to create a new class:
+document.querySelector(“element/class/id”).classList.add(“className”);
+then go back to CSS script to add the new selector “.className” and set the style to it;
+
+“document.querySelector(“element/class/id”).attributes”:
+can search how many attributes in that specific element and its(attribute) type;
+
+”document.querySelector(“element/class/id”).getAttribute(“specific attribute”)”:
+can search out the specific attribute’s contend for us;
+
+”document.querySelector(“element/class/id”).setAttribute(“the attribute you want to change”, “the new attribute”)”;
+eg/: if we want to change the link inside the <a href> attribute:
+    document.querySelector(“element/class/id”).setAttribute(“href”, “www.douban.com”);
+    (“www.douban.com“ is the new attribute we want to give to the element<a>;)
+
+JS operation:
+(**= is also can be written as: Math.pow(x, y))
+
+
+JS datatypes:
+number:
+      (number can be written with or without the decimal小数)；
+      NaN (it’s belongs to the “number” datatype, it means a number is not a legal number);
+
+string (an empty value “ ” is still a string);
+object (written with curly{} bracket);
+      array (it’s also belongs to the type of “object”);
+      null (“null” is an object, that means you can empty an object by using set it to “null”. “null” and “undefined” share different data types);
+Boolean;
+undefined (means the var’s value is undefined);
+
+sth need to be attention:
+
+
+in the second example, because the first datatype is a string, so all the operands will all be treated as “strings”.
+
+
+Primitive data types: number/string/boolean/undefined;
+complex data types: object/function;
+
+JS’s objects (can also be a variable, seperate the properties by ”:”)are containers for named values called “properties” and “methods”.
+”properties”: 
+the “name: value” are been called an object’s property; can be access in two ways: objectName.propertyName/ objectName[“propertyName”];
+”methods”:
+”methods” are stored in properties as function definitions;
+
+
+can be access in this way: objectName.methodName() 
+eg/: the above examples’s methodName is “fullName”;
+
+HTML events don’t need camel-writing;
+
+“substring()” method can’t accept negtive indexes;
+
+”substr()” method’s last index imply the length that you want to sliced;
+
+“regular expression” doesn’t need the quotation marks;
+
+
+
+JS numbers:
+when there is a subtract/multiply/divide numeric operation(-, *,/), JS will try to convert the two strings to numbers. Except when the numeric operation is addtition(+).
+
+”isNaN()” function can used to test if a number valid or not:
+
+ 
+any number divided “zero(0)” can generates infinity(无限)；
+
+”toFix()” method will return a string with specific decimal numbers you set up with:
+
+
+”toPrecision()” method will also return a string, but with the specific totally length you want:
+
+
+Global JS methods:
+”Number()” convert the variables to numbers:
+
+”ParseInt()” convert a string into a whole number（整数）, spaces are allowed, but will only access the first number:
+
+
+”ParseFloat()” is also convert a string into a whole number, spaces are allowed, but will only access the first number:
+
+
+
+All Jacascript methods have the “toString()” method;
+
+Array:
+splice(2,3): means cut off start from the position 2, and the 3 means “cut-length”;
+slice(1,3): means create a new array from the former one, start from position 1, but end at before position 3. the new slice array is [position1, position2]
+
+the compare function (used in array for the array to sort numerically):
+
+method 1:   function(a,b){return a - b}:
+
+
+
+sorting an array in random order:
+function(a,b){return 0.5 - Math.random()};
+
+
+Object Construction Function:
+syntax: can’t use the “camel casing”, the first letter must be upper case. (eg/: BellBoy);
+object’s function method doesn’t neet to be write into the “ojectname()”’s parenthesis;
+
+One way of getting the properties from an array —— “for... in” loop:
+
+
+another way is to make the object into an array:
+var person = {name: “Peter”, age: 18, city: “New York”};  // prototype is an object;
+var myArray = Object.values(person);  // create an new array, it items comes from: datatype(Object).values(objectName: person);
+myArray = [“Peter”, 18, “New York”]; 
+
+the easiest way is to directly log out its properties’ values:
+var person = {name: “Peter”, age: 18, city: “New York”}; 
+document.getElementId(“id”).innerHTML = person.name+” ,”+person.age+” ,”+person.city;
+
+or using the “JSON-stringify” function:
+var person = {name: “Peter”, age: 18, city: “New York”}; 
+var myString = JSON.stringify(person);  //create a new string var using JSON.stringify(objectName);
+document.getElementId(“id”).innerHTML = myString  //it will display the new string;
+
+(Attention: if the prototype object has “function” method, then the JSON-stringify function will not display it!! But you can fix it by string the object’s “function” method before you using the “JSON-stringify” function:
+ )
+ 
+
+Syntax: event.key ——
+means the keyboard event has been triggered, and the “key” is a property of the (keyboard) event.
+
+
+Callback function 回调函数:
+that means a function can call another function, a callback can run after another function has finished.
+
+If A can’t % B, then it will return A;
+
+“argument”: it’s an array-like object (means the arguments only has a “length” property) accessible inside functions that contains the values of the arguments passed to that function; 
+
+
+Bitwise:
+and: &;  or: |;  xor: ^;
+
+
+If the output is to compare the two items, then it will return “true” or “false”;
+
+
+getDay() method gets the weekday of a week;
+getDate() method gets the date we specific in the Date function;
+
+
+The parseInt() function parses a string and returns an integer. 

@@ -1,0 +1,6 @@
+
+“col-md-6” : 
+
+“md” means “ medium”, 
+means that when the screen set to a laptop or an pad size, the two “col-md-6” will show on a line. 
+But when the screen set to a mobile-phone size, the two “col-md-6” will shuffle to two row stack by stack.

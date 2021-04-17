@@ -50,8 +50,13 @@ var a3 = a.map( s => s.length );
 
 
 5) setInterval():
+
+The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
+The setInterval() method will continue calling the function until clearInterval() is called, or the window is closed.
+
 // Alert "Hello" every 3 seconds (3000 milliseconds):
    setInterval(function(){ alert("Hello"); }, 3000);
+   
 
 6） setAttribute("class/id", "classname/idname"):
 document.getElementsByTagName("INPUT")[0].setAttribute("type", "button"); // create a html attribute: type="button".

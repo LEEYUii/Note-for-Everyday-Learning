@@ -1,0 +1,67 @@
+1)  The parseInt() function parses a string and returns an integer:
+
+function myFunction() {
+  var a = parseInt("10") + "<br>";  // 10
+  var b = parseInt("10.00") + "<br>";  // 10
+  var c = parseInt("10.33") + "<br>";  // 10
+  var d = parseInt("34 45 66") + "<br>";  // 34
+  var e = parseInt("   60   ") + "<br>";  // 60
+  var f = parseInt("40 years") + "<br>";  //40
+  var g = parseInt("He was 40") + "<br>";  // NaN
+
+  var h = parseInt("10", 10)+ "<br>";  // 10
+  var i = parseInt("010")+ "<br>";  // 10
+  var j = parseInt("10", 8)+ "<br>";  // 8
+  var k = parseInt("0x10")+ "<br>";  // 16
+  var l = parseInt("10", 16)+ "<br>";  // 16
+}
+
+
+2)  Window.getComputedeStyle() :
+syntax: window.getComputedStyle(element, pseudoElement);
+
+3) JS event:
+
+HTML events are "things" that happen to HTML elements.
+When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+
+4) What's the meaning of the "=>" ?
+can often use the "=>" in place of expressions like function (event) {...};
+These function expressions are best suited for non-method functions and they can not be used as constructors.
+
+eg/:
+
+var a = [
+  "We're up all night 'til the sun",
+  "We're up all night to get some",
+  "We're up all night for good fun",
+  "We're up all night to get lucky"
+];
+
+// These two assignments are equivalent:
+
+// Old-school:
+var a2 = a.map(function(s){ return s.length });
+
+// ECMAscript 6 using arrow functions
+var a3 = a.map( s => s.length );
+
+// both a2 and a3 will be equal to [31, 30, 31, 31];
+
+
+5) setInterval():
+// Alert "Hello" every 3 seconds (3000 milliseconds):
+   setInterval(function(){ alert("Hello"); }, 3000);
+
+6） setAttribute("class/id", "classname/idname"):
+document.getElementsByTagName("INPUT")[0].setAttribute("type", "button"); // create a html attribute: type="button".
+
+7)  appendChild(): 
+Syntax: node.appendChild(node)  !!! Remember: withouthe the perentersis !!!
+The appendChild() method appends a node as the last child of a node.
+eg/: 
+
+var node = document.createElement("LI");                 // Create a <li> node
+var textnode = document.createTextNode("Water");         // Create a text node
+node.appendChild(textnode);                              // Append the text to <li>
+document.getElementById("myList").appendChild(node);     // Append <li> to <ul> with id="myList"

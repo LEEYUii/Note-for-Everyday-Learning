@@ -1,0 +1,11 @@
+1) Command Line:
+
+create a new folder: $ mkdir foldername;
+enter the new folder: $ cd foldername;
+check the new folder: $ ls;
+create a new file inside the new folder: $ tonch newfilename.extension;
+
+"node index.js": means use node to run this file;
+
+exit the current file: .exit or "ctrl+c"*2;
+clear the console: clear;

@@ -7,5 +7,11 @@ create a new file inside the new folder: $ tonch newfilename.extension;
 
 "node index.js": means use node to run this file;
 
-exit the current file: .exit or "ctrl+c"*2;
+exit the current file: .exit or "ctrl+s"*2;
 clear the console: clear;
+
+initialize npm: $ npm init;  (this means setting up the npm, the created file name call "package.json")
+
+want to open the project folder inside the hyper: $ atom .  (can't omit the space)
+
+how to stop the server: Crtl + C;

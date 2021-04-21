@@ -15,3 +15,94 @@ initialize npm: $ npm init;  (this means setting up the npm, the created file na
 want to open the project folder inside the hyper: $ atom .  (can't omit the space)
 
 how to stop the server: Crtl + C;
+
+if we want to use the "nodemon": after create the "get" and "listen" function, we can run "nodemon filename.extension" in Hyper;
+
+-----------------------------------------
+
+can use "sendFile" function to save all the path to the server:
+
+eg/:
+
+const express = require ("express");
+const app = express();
+
+app.get("/", function(req,res) {
+  res.sendFile(__dirname + "/index.html");
+})
+
+
+app.listen(3000, function() {
+  console.log("Serveer is running on port 3000");
+})
+
+-----------------------------------------
+
+const express = require ("express");
+const bodyParser = require ("body-parser");
+
+const app = express();
+app.use(bodyParser.urlencoded({extended:true}));
+// if we want to grab the information that posted from an HTML, need to use the "urlencoded" function;
+// set {extended: true} allows us to post nested objects; (using "body-parser" requires us to declare the "extended" option to be true);
+
+app.get("/", function(req,res) {
+  res.sendFile(__dirname + "/index.html");
+})
+
+
+app.post("/", function(req,res) {
+  res.send("Thanks for posting that");
+})
+
+app.listen(3000, function() {
+  console.log("Serveer is running on port 3000");
+})
+
+-----------------------------------------
+
+
+const express = require ("express");
+const bodyParser = require ("body-parser");
+
+const app = express();
+app.use(bodyParser.urlencoded({extended:true}));
+// if we want to grab the information that posted from an HTML, need to use the "urlencoded" function;
+// set {extended: true} allows us to post nested objects; (using "body-parser" requires us to declare the "extended" option to be true);
+
+app.get("/", function(req,res) {
+  res.sendFile(__dirname + "/index.html");
+})
+
+
+app.post("/", function(req,res) {
+
+  var num1 = Number(req.body.num1);  // "req.body.num1" get parsed as text, not a number; so need to add Number() method to change it into num;
+  var num2 = Number(req.body.num2);  // "num1" and "num2" comes from the HTML "name" attribute;
+
+  var result = num1 + num2;
+
+  res.send("The result of the calculation is " + result);
+})
+
+
+app.get("/bmiCalculator", function(req, res) {
+  res.sendFile(__dirname + "/bmiCalculator.html");   // link the html and the js;
+})
+
+app.post("/bmiCalculator", function(req,res) {
+
+  var weight = parseFloat(req.body.weight);  // The parseFloat() function parses a string and returns a floating point number.
+  var height = parseFloat(req.body.height);
+
+  var bmi = Math.floor(weight/Math.pow(height, 2));
+
+  res.send("Your BMI is " + bmi);
+
+})
+
+app.listen(3000, function() {
+  console.log("Serveer is running on port 3000");
+})
+
+

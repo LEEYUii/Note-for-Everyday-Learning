@@ -63,3 +63,14 @@ css如何让div在顶部固定不动？
 
 Viewport Height: (vh)
 Viewport Height (vh). This unit is based on the height of the viewport. A value of 1vh is equal to 1% of the viewport height.
+
+
+
+::before & ::after : 
+The ::before selector inserts something before the content of each selected element(s).
+Use the ::after selector to insert something after the content.
+
+
+.calculator-grid > button {}: 
+means select all the "button" elements that inside the "class=claculator-grid" element;
+

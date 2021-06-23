@@ -121,3 +121,7 @@ app.listen(3000, function() {
   console.log("Server is running on port 3000.");
 })
 
+-------------------------------------------
+
+5 Ways to Make HTTP Requests in Node.js
+https://www.twilio.com/blog/2017/08/http-requests-in-node-js.html
